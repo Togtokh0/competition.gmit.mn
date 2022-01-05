@@ -1,0 +1,24 @@
+[07-Sep-2021 05:15:40 UTC] PHP Parse error:  syntax error, unexpected double-quote mark, expecting "-" or identifier or variable or number in /home2/togtokhd/public_html/dev/Industry/v1/data/users.php on line 30
+[07-Sep-2021 05:16:01 UTC] PHP Parse error:  Unclosed '[' on line 30 in /home2/togtokhd/public_html/dev/Industry/v1/data/users.php on line 38
+[19-Oct-2021 17:37:32 Asia/Ulaanbaatar] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_pro.php:18
+Stack trace:
+#0 /home2/togtokhd/public_html/dev/Industry/v2/data/mod_pro.php(18): mysqli_num_rows()
+#1 {main}
+  thrown in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_pro.php on line 18
+[19-Oct-2021 09:40:36 UTC] PHP Parse error:  syntax error, unexpected token "if" in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_pro.php on line 27
+[23-Oct-2021 12:17:16 Asia/Ulaanbaatar] PHP Warning:  Undefined variable $row_post in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_in.php on line 28
+[23-Oct-2021 12:17:16 Asia/Ulaanbaatar] PHP Warning:  Trying to access array offset on value of type null in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_in.php on line 28
+[23-Oct-2021 12:17:16 Asia/Ulaanbaatar] PHP Warning:  Trying to access array offset on value of type null in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_in.php on line 28
+[16-Nov-2021 08:09:04 UTC] PHP Warning:  Undefined variable $db in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php on line 9
+[16-Nov-2021 08:09:04 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php:9
+Stack trace:
+#0 /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php(9): mysqli_query()
+#1 {main}
+  thrown in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php on line 9
+[16-Nov-2021 08:09:26 UTC] PHP Warning:  Undefined variable $db in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php on line 9
+[16-Nov-2021 08:09:26 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php:9
+Stack trace:
+#0 /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php(9): mysqli_query()
+#1 {main}
+  thrown in /home2/togtokhd/public_html/dev/Industry/v2/data/deletePost.php on line 9
+[07-Dec-2021 12:19:57 Asia/Ulaanbaatar] PHP Warning:  Trying to access array offset on value of type null in /home2/togtokhd/public_html/dev/Industry/v2/data/mod_in.php on line 28
