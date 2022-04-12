@@ -1,24 +1,24 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require '/home2/togtokhd/PHPMailer/PHPMailer/src/Exception.php';
-require '/home2/togtokhd/PHPMailer/PHPMailer/src/PHPMailer.php';
-require '/home2/togtokhd/PHPMailer/PHPMailer/src/SMTP.php';
+require dirname(__file__) . '/'.'/PHPMailer/src/Exception.php';
+require dirname(__file__) . '/'.'/PHPMailer/src/PHPMailer.php';
+require dirname(__file__) . '/'.'/PHPMailer/src/SMTP.php';
 function email_sent_user_fun($to_user,$title_user,$subject_user,$body_user){
 $mail = new PHPMailer(true);
   try {
       $mail->SMTPDebug = 2;
       $mail->isSMTP();
-      $mail->Host       = 'mail.nani.mn';
+      $mail->Host       = 'smtp.gmail.com';
       $mail->SMTPAuth   = true;
-      $mail->Username   = 'info@nani.mn';
-      $mail->Password   = '89893218Login';
+      $mail->Username   = 'noreply@togtokh.dev';
+      $mail->Password   = 'lynwnvhpjaoggedk';
       $mail->SMTPSecure = 'ssl';
       $mail->Port       = 465;
       $mail ->CharSet = "UTF-8";
-      $mail->setFrom('info@nani.mn', $title_user);
+      $mail->setFrom('noreply@togtokh.dev', $title_user);
       $mail->addAddress($to_user, 'Эрхэм харилцагч таньд');
-      $mail->addReplyTo('info@nani.mn', 'Админ');
+      $mail->addReplyTo('noreply@togtokh.dev', 'Админ');
       $mail->isHTML(true);
       $mail->Subject = $subject_user;
       $mail->Body    = $body_user;
@@ -36,18 +36,18 @@ function email_sent_user_fun_array($to_user,$title_user,$subject_user,$body_user
   try {
       $mail->SMTPDebug = 2;
       $mail->isSMTP();
-      $mail->Host       = 'mail.nani.mn';
+      $mail->Host       = 'smtp.gmail.com';
       $mail->SMTPAuth   = true;
-      $mail->Username   = 'info@nani.mn';
-      $mail->Password   = '89893218Login';
+      $mail->Username   = 'noreply@togtokh.dev';
+      $mail->Password   = 'lynwnvhpjaoggedk';
       $mail->SMTPSecure = 'ssl';
       $mail->Port       = 465;
       $mail ->CharSet = "UTF-8";
-      $mail->setFrom('info@nani.mn', $title_user);
+      $mail->setFrom('noreply@togtokh.dev', $title_user);
       foreach ($to_user as &$value_email) {
           $mail->addAddress($value_email, 'Эрхэм харилцагч таньд');
       }
-      $mail->addReplyTo('info@nani.mn', 'Админ');
+      $mail->addReplyTo('noreply@togtokh.dev', 'Админ');
       $mail->isHTML(true);
       $mail->Subject = $subject_user;
       $mail->Body    = $body_user;

@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
   session_start();
   require_once 'api/autoload.php';
 	$facebook = new \Facebook\Facebook([
@@ -13,7 +14,7 @@ function mail_v1($to,$subject,$msg){
 
 
 }
-$db = mysqli_connect("localhost", "admin", "admin_pass", "Industry_Platform");
+$db = mysqli_connect("127.0.0.1", "root", "Login12345678@", "Industry_Platform");
 $db -> set_charset("utf8");
 @$user_id=$_SESSION['user_data']['user_id'];
 $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; date_default_timezone_set("Asia/Ulaanbaatar");

@@ -22,16 +22,17 @@ if (isset($_POST['f_pass'])) {
         <p>&nbsp;</p>
       </div>
     </div>';
-    email_sent_user_fun($email,'Industry_Platform','Industry Platform нууц үг сэргээх',$html);
+    if(email_sent_user_fun($email,'Industry_Platform','Industry Platform нууц үг сэргээх',$html)){
+      echo "";
+    }else{
+      echo "";
+    }
+    
 
   }
 }
 if (isset($_GET['re_email'])) {
   if(isset($_SESSION['forgot'])){
-    function user_id_rand($length = 7) {
-        return substr(str_shuffle(str_repeat($x='0123456789', ceil($length/strlen($x)) )),1,$length);
-    }
-    $_SESSION['forgot']['rand'] =user_id_rand();
     $html='<div style="max-width:550px; min-width:320px;  background-color: white; border: 1px solid #DDDDDD; margin-right: auto; margin-left: auto;">
       <div style="margin-left:30px;margin-right:30px">
         <p>&nbsp;</p>
@@ -50,7 +51,11 @@ if (isset($_GET['re_email'])) {
         <p>&nbsp;</p>
       </div>
     </div>';
-    mail_v1($_SESSION['forgot']['email'],'Монголын Математикийн Нийгэмлэг нууц үг сэргээх',$html);
+    if(email_sent_user_fun($_SESSION['forgot']['email'],'Industry_Platform','Industry Platform нууц үг сэргээх',$html)){
+      echo "";
+    }else{
+      echo "";
+    }
 
   }
 
@@ -63,9 +68,15 @@ if (isset($_POST['f_pass_ck'])) {
     mysqli_query($db, "UPDATE users SET user_pass='$password' WHERE user_email='$email_ok' ");
         unset($_SESSION['forgot']);
         $alert=true;
+        echo "<script>
+    alert('Амжилттай');
+    </script>";
+  }else{
+    echo "<script>
+    alert('Код таарсангүй');
+    </script>";
   }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -95,6 +106,7 @@ if (isset($_POST['f_pass_ck'])) {
 		<link rel="shortcut icon" href="assets/media/bg/logo.png" />
 		<?php echo $head_form; ?>
 	</head>
+
 	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 		<div class="d-flex flex-column flex-root">
 			<div class="login login-5 wizard d-flex flex-column flex-lg-row flex-column-fluid">
@@ -168,7 +180,10 @@ if (isset($_POST['f_pass_ck'])) {
 		<script src="assets/plugins/global/plugins.bundle.js"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
 		<script src="assets/js/scripts.bundle.js"></script>
+    
+    
 		<script >
+  
 		$('#submitBtn').prop('disabled', true);
     $('#submitBtn_2').prop('disabled', true);
 		$('#password').keyup(function(){
