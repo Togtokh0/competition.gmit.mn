@@ -174,7 +174,7 @@
 											</span>
 										</div>
 									</div>
-								
+
 									<!--end::Toggle-->
 									<!--begin::Dropdown-->
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
@@ -341,7 +341,7 @@
 																	<div class="text-dark-50 font-weight-bold font-size-lg pt-2 text-center"><img src="<?php if($row_post['photo']=='img_null' || !$row_post['photo']){
 												            echo $host_url."uploads/logo.png";
 												          }else{
-												            echo @$_SESSION['user_data']['photo'];
+												            echo $host_url.$_SESSION['user_data']['photo'];
 												          } ?>" alt="" class="img-fluid ww-100" ></div>
 
 															<div class="text-dark-50 font-weight-bold font-size-xl text-center text-dark-75"><?php echo $row_post['user_name']; ?></div>
