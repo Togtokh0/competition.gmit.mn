@@ -20,8 +20,8 @@ $db -> set_charset("utf8");
 $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; date_default_timezone_set("Asia/Ulaanbaatar");
 $time=(new DateTime())->format("Y-m-d G:i:s");
 $time_short=(new DateTime())->format("Y-m-d");
-$host_url="competition.gmit.mn/v2/";
-$domain="competition.gmit.mn";
+$host_url="https://competition.gmit.mn/v2/";
+$domain="https://competition.gmit.mn";
 if (isset($_GET['logout'])) {
   session_destroy();
   unset($_SESSION['user']);
