@@ -299,7 +299,7 @@
 										 <div class="card">
 										  <div class="card-header" id="headingOne8">
 										   <div class="card-title" data-toggle="collapse" data-target="#collapseOne8">
-										    <div class="card-label text-warning"><?php echo $lang[$lan]['about_page']['about']; ?></div>
+										    <div class="card-label text-warning">Энэхүү платформыг МГТИС-ийн Стратегийн судалгааны хөгжлийн сангийн санхүүжилтээр хөгжүүлж байна</div>
 										    <span class="svg-icon">
 										     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 										      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -312,9 +312,14 @@
 										   </div>
 										  </div>
 										  <div id="collapseOne8" class="collapse show" data-parent="#accordionExample8">
+
 										   <div class="card-body">
-												 <p><strong><?php echo $lang[$lan]['about_page']['about_in']; ?>
-													</strong></p>
+												 <p>Төслийн удирдагч : Проф. Л.Алтангэрэл </p>
+ 												<p>Багийн гишүүд:  </p>
+ 												<p>О.Соронзонболд</p>
+ 												<p>Г.Доржсундуй</p>
+ 												<p>Д.Жавхлантөгс</p>
+												 <p>Хөгжүүлэгч А.Буянтогтох</p>
 										   </div>
 										  </div>
 										 </div>
